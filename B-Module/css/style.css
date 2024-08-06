@@ -1,0 +1,656 @@
+@font-face {
+    font-family: paris2024;
+    src: url("../media/05-fonts/Paris2024/Paris2024-Variable.ttf");
+}
+
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url("../media/05-fonts/Poppins/Poppins-Light.ttf");
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url("../media/05-fonts/Poppins/Poppins-Medium.ttf");
+}
+
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url("../media/05-fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: PoppinsRegular;
+    src: url("../media/05-fonts/Poppins/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.header-banner img {
+    width: 200px;
+    height: 60px;
+}
+
+.header-banner ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header-banner ul li {
+    list-style: none;
+    font-family: paris2024;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.divider-element {
+    background-color: lightblue;
+    height: 100%;
+    width: 40px;
+    clip-path: polygon(88% 0, 100% 0, 12% 100%, 0% 100%);
+}
+
+.main-image {
+    background: url("../media/03-images/hero-lg.png");
+    width: 100%;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    text-align: right;
+    padding-top: 20px;
+    position: relative;
+    font-family: paris2024;
+}
+
+.main-image h1 {
+    color: #fff;
+    font-size: 80px;
+    font-family: paris2024;
+}
+
+.main-image h3 {
+    font-size: 70px;
+    color: #D5E2F0;
+    font-family: paris2024;
+}
+
+.select-items {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    height: 100%;
+    gap: 5px;
+    align-items: flex-end;
+    transform: translateY(-45%);
+}
+
+
+.select-element {
+    border-radius: 5px;
+    background-color: #333333c7;
+    width: 130px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle {
+    width: 5px;
+    height: 5px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #ffffff7e;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.mascot-image {
+    width: 400px;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    transform: translate(20%, -5%);
+}
+
+.title-cont {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+    font-family: Paris2024;
+    font-weight: bold;
+    background: linear-gradient(to right, #ED2939, #ED2939, #002495, #002495);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.left-image {
+    margin-right: 10%;
+}
+
+.info-countdown {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.info-countdown .olympic-text {
+    font-family: PoppinsRegular;
+    font-size: 20px;
+}
+
+.info-countdown .olympic-date {
+    font-family: PoppinsRegular;
+    font-size: 16px;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    font-family: paris2024;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer p {
+    font-size: 100px;
+}
+
+.timer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timer span {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+#road-to {
+    background-color: #D5E2F0;
+    padding-top: 30px;
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+    padding-bottom: 40px;
+}
+
+#shop {
+    background-color: #D5E2F0;
+    padding-top: 30px;
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+    padding-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+}
+
+.road-image-element {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.road-image-element:hover {
+    transform: scale(1.5);
+}
+
+.fiba {
+    overflow: hidden;
+    background: url("../media/03-images/road-01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.uwv {
+    background: url("../media/03-images/road-02.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.uipm {
+    background: url("../media/03-images/road-03.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px
+}
+
+.issf {
+    background: url("../media/03-images/road-04.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.road-element {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.road-title {
+    font-weight: bold;
+}
+
+.road-content {
+    padding: 10px;
+    font-family: paris2024;
+}
+
+.road-content-text {
+    font-family: PoppinsRegular;
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 10px;
+    margin-top: 5px
+}
+
+.tablet-mobile-elemtns {
+    display: none;
+    height: 100%;
+    align-items: center;
+}
+
+.hidden-selector {
+    display: none;
+}
+
+.grid-partners-mobile {
+    display: none;
+}
+
+/* Tablet: 2 columnas */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .road-element:nth-child(n+3) {
+        display: none;
+    }
+
+    .games-elements:nth-child(n+3) {
+        display: none;
+    }
+
+    .shop-element:nth-child(n+3) {
+        display: none;
+    }
+
+    .header-banner ul {
+        display: none;
+    }
+
+    .tablet-mobile-elemtns {
+        display: flex;
+        align-items: center;
+    }
+
+    .timer-container {
+        flex-direction: column;
+    }
+
+    .mascot-image {
+        transform: translate(0%, -5%);
+
+    }
+
+    .hidden-selector {
+        display: flex;
+        margin-bottom: 0px !important;
+    }
+
+    .emblem {
+        margin-top: 0px !important;
+    }
+
+    .grid-partners {
+        display: none !important;
+    }
+
+    .grid-partners-tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+.select-mobile-items {
+    display: none;
+}
+
+
+
+.selectors {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    margin-top: 50px;
+    gap: 10px;
+    margin-bottom: 150px;
+    font-family: PoppinsRegular;
+    font-size: 15px;
+}
+
+.games-elements {
+    background-color: #D5E2F0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.image-game-element {
+    max-width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition-duration: .2s;
+}
+
+.image-product-element {
+    width: 300px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 20px;
+    overflow: hidden;
+    transition-duration: .2s;
+}
+
+.t-shirt {
+    background-image: url("../media/03-images/shop-01.png");
+}
+
+.image-game-element:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.image-product-element:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.sports {
+    background-image: url("../media/03-images/about-01.png");
+}
+
+.venues {
+    background-image: url("../media/03-images/about-02.png");
+}
+
+.celebrate {
+    background-image: url("../media/03-images/about-03.png");
+}
+
+.information {
+    background-image: url("../media/03-images/about-04.png");
+}
+
+
+
+.title-game-element {
+    color: #fff;
+    background-color: #ED2939;
+    padding: 20px;
+    font-family: paris2024;
+    font-size: 20px;
+    font-weight: 500;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.game-content {
+    padding: 10px;
+    font-family: PoppinsRegular;
+    font-size: 13px;
+}
+
+.emblem {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-element {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 350px;
+    padding: 20px;
+    font-family: paris2024;
+    font-weight: 500;
+}
+
+.last-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.last-row p {
+    font-family: paris2024;
+    font-size: 50px;
+}
+
+.last-row button {
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+    font-family: paris2024;
+    padding: 15px;
+    width: 150px;
+}
+
+.see-more {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: right;
+    width: 100%;
+    font-family: PoppinsRegular;
+    text-decoration: underline;
+    color: #333333;
+    font-size: 16px;
+}
+
+.grid-partners {
+    margin-top: 50px;
+    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+}
+
+footer {
+    margin-top: 100px;
+    padding-top: 100px;
+    color: #fff;
+    font-family: PoppinsRegular;
+    clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(to right, #474747 50%, #333333 50%);
+}
+
+
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.logo {
+    margin-bottom: 100px;
+}
+
+.footer-links-container {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    align-items: flex-start;
+}
+
+.grid-partners-tablet {
+    display: none;
+}
+/* Móvil: 1 columna */
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .road-element:nth-child(n+2) {
+        display: none;
+    }
+
+    .games-elements:nth-child(n+2) {
+        display: none;
+    }
+
+    .shop-element:nth-child(n+2) {
+        display: none;
+    }
+
+    .shop-element {
+        max-width: 100% !important;
+    }
+
+    .grid-partners-tablet {
+        display: none;
+    }
+
+    .grid-partners-mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .select-items {
+        display: none;
+    }
+
+    .main-image h1 {
+        color: #fff;
+        font-size: 40px;
+        font-family: paris2024;
+    }
+
+    .main-image h3 {
+        font-size: 30px;
+        color: #D5E2F0;
+        font-family: paris2024;
+    }
+
+    .mascot-image {
+        transform: translate(10%, -30%);
+        width: 300px;
+
+    }
+
+    .select-mobile-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logo-main {
+        max-width: 300px;
+        margin-bottom: 100px;
+    }
+
+    .mobile-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .timer p {
+        font-size: 50px;
+    }
+    .selectors {
+        display: flex;
+        justify-content: space-around !important;
+        padding-right: 0px !important;
+    }
+    .footer-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    footer {
+        background: #474747;
+
+    }
+}

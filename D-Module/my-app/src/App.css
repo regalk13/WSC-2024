@@ -1,0 +1,107 @@
+@font-face {
+  font-family: Paris2024;
+  src: url("../public/fonts/Paris2024/Paris2024-Variable.ttf");
+}
+
+body {
+  background: url("../../media/images/bg.png");
+  background-size: cover;
+  background-color: #000;
+  background-position: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  font-family: Paris2024;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.frame {
+  margin-top: 40px;
+}
+
+.App button {
+  width: 100%;
+  border: none;
+  border: 2px solid #fff;
+  background-color: #ffffff75;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  font-family: Paris2024;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+.buttons {
+  margin-top: 30px;
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.header-container img {
+  margin-left: 85px;
+  width: 160px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 45px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+}
+.buttons button img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+.buttons button {
+  width: 100%;
+  border: none;
+  border: 2px solid #fff;
+  background-color: #ffffff75;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  font-family: Paris2024;
+  font-size: 20px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.table-medals {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.table-medals td {
+  padding: 10px;
+  text-align: center;
+}

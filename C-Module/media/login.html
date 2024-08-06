@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="js/tailwindcss-3.4.4.js"></script>
+    <link rel="stylesheet" href="css/daisyui.min.css">
+    <script>
+        async function loginUser(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password
+                    })
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    // Handle successful login, e.g., store token and redirect
+                    localStorage.setItem('authToken', data.token);
+                    window.location.href = '/dashboard'; // Redirect to a protected route
+                } else {
+                    // Handle errors
+                    alert(data.message || 'Login failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred');
+            }
+        }
+    </script>
+</head>
+<body class="min-h-[100vh] flex justify-center items-center bg-slate-400">
+    <main>
+        <h1 class="bg-slate-800 text-slate-400 flex gap-2 items-center justify-center text-3xl text-center p-2 rounded-ss rounded-tr">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+            Login
+        </h1>
+        <div class="bg-slate-300 w-[380px] flex flex-col p-4 rounded-ee rounded-bl">
+            <label class="text-slate-600 font-semibold">Username:</label>
+            <input type="text" id="username" placeholder="username" class="bg-slate-400 placeholder-slate-600 text-slate-600 input input-bordered w-full mb-2"/>
+            <label class="text-slate-600 font-semibold">Password:</label>
+            <input type="password" id="password" placeholder="password" class="bg-slate-400 placeholder-slate-600 text-slate-600 input input-bordered w-full mb-2"/>
+            <button onclick="loginUser(event)" class="btn mt-4 bg-slate-700 text-slate-400 w-full border-0">Login</button>
+        </div>
+    </main>
+</body>
+</html>
