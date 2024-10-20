@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>08- Task</title>
+    <style>
+        .grid-container {
+            display: grid;
+          grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            grid-template-rows: repeat(3, 1fr);  
+            height: 100vh;
+            gap: 10px;
+            grid-template-areas:
+                "item1 item1 item2 item3"
+                "item1 item1 item4 item4"
+                "item5 item6 item4 item4"
+        }
+
+        .item1 { grid-area: item1; background: url('./images/ani01.png') no-repeat center/cover; }
+        .item2 { grid-area: item2; background: url('./images/ani02.png') no-repeat center/cover; }
+        .item3 { grid-area: item3; background: url('./images/ani03.png') no-repeat center/cover; }
+        .item4 { grid-area: item4; background: url('./images/ani04.png') no-repeat center/cover; }
+        .item5 { grid-area: item5; background: url('./images/ani05.png') no-repeat center/cover; }
+        .item6 { grid-area: item6; background: url('./images/ani06.png') no-repeat center/cover; }
+
+        .grid-container > div {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="grid-container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+        <div class="item5"></div>
+        <div class="item6"></div>
+    </div>
 </body>
 </html>

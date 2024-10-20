@@ -18,13 +18,22 @@
                     </tr>
                     <tr>
                       <th>[1, 2, 3, 4, 5]</th>
-                      <td>9</td>
+                      <td id="result"></td>
                     </tr>
                 </table>
         </div>
     </main>
     <script>
-        // Work Here
+        function calculateGreaterSum(arr) {
+            if (arr.length < 2) return 0; // Handle edge case
+            arr.sort((a, b) => b - a); // Sort in descending order
+            return arr[0] + arr[1]; // Sum the two largest numbers
+        }
+
+        const inputArray = [1, 2, 3, 4, 5];
+        const greaterSum = calculateGreaterSum(inputArray);
+        document.getElementById('result').textContent = greaterSum;
     </script>
 </body>
+
 </html>
